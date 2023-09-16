@@ -8,50 +8,78 @@
   <title>Proyecto Final</title>
   
 </head>
-  <body>
-<div>
-<div>
-    <div class="music-player-container">
+<body>
+
+  <header>
+
+    <!-- en este sitio va la parte superior  -->
+
+    <!-- 
+      La barra de busqueda que será un input
+      el texto Create a Playlist
+      La tarjeta de usuario
+     -->
+
+  </header>
+
+  <main>
+    <!-- El main contendrá el resto de la página
+    Dado que en tu diseño el main se divide en dos, voy a crear dos <div>
+    -->
+
+    <!-- El primer div tiene la lista de las canciones -->
+    <div class="track-list"></div>
+
+    <!-- El segundo div tendrá la canción que está sonando  -->
+    <div class="current-song">
+
+      <!-- Aquí dentro estará la imagen con el títutlo de la canción y autor -->
+
+
+      <!-- Tambien deberás tener otro div para que contenga los botones, ese debes crearlo tú mismo -->
+    </div>
+
+  </main>
+  <script src="main.js"></script>
+    <!-- <div>
+      <div>
+        <div class="music-player-container">
       
-      <div class="title-music-container">
-        <h4 class="titulo-de-la-cancion">Blinding Lights</h4>
-          <span class="autor">The Weeknd</span>
-          <div class="icono"><img src="https://leonardoapi.onrender.com/assets/music/img/theweeknd_blindinglights.jpg" alt="" class="icon" id="theweeknd"></div>
-      </div>
+          <div class="title-music-container">
+            <h4 class="titulo-de-la-cancion">Blinding Lights</h4>
+            <span class="autor">The Weeknd</span>
+            <div class="icono">
+              <img src="https://leonardoapi.onrender.com/assets/music/img/theweeknd_blindinglights.jpg" alt="" class="icon" id="theweeknd">
+            </div>
+          </div>
     
-      <div class="controles-container">
-        <div class="duracion-container">
-          <div class="barra-de-progreso">
-           <span class="progreso"></span>
+          <div class="controles-container">
+            <div class="duracion-container">
+              <div class="barra-de-progreso">
+                <span class="progreso"></span>
     
-    
-        
-  </div>
+              </div>
 
-    <div>
-     
-    
-    </div>
+              <div></div>
 
-       <div class="tiempo-contenedor">
-          <span class="tiempo.restante" id="CurrentSongTime"></span>
-            <span class="tiempo.restante" id="SongLength"></span>
+              <div class="tiempo-contenedor">
+                <span class="tiempo.restante" id="CurrentSongTime"></span>
+                <span class="tiempo.restante" id="SongLength"></span>
          
-    </div>
+              </div>
 
-    <audio controls preload="metadata" src="https://leonardoapi.onrender.com/assets/music/audio/theweeknd_blindinglights.mp3"></audio>
-    <div class="main-song-controls">  
-      <img src="/assets/skip.png" alt="" class="icon" id="Plus10">
-      <img src="/assets/play.png" alt="" class="icon" id="skipLeft">
-      <img src="assets/skip 2.png" alt="" class="icon" id="skipRight">
-    </div>
-</div>
-
-</div>
-
-<script src="main.js"></script>
+              <audio controls preload="metadata" src="https://leonardoapi.onrender.com/assets/music/audio/theweeknd_blindinglights.mp3"></audio>
+              <div class="main-song-controls">  
+                <img src="/assets/skip.png" alt="" class="icon" id="Plus10">
+                <img src="/assets/play.png" alt="" class="icon" id="skipLeft">
+                <img src="assets/skip 2.png" alt="" class="icon" id="skipRight">
+              </div>
+            </div>
 
 
-
+            
+          </div>
+        </div>
+      </div> -->
   </body>
 </html>
