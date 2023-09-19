@@ -4,54 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA Compatible" content="IE=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>Proyecto Final</title>
   
+  <title>Proyecto Final</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <title>Proyecto Final</title>
+
 </head>
   <body>
-<div>
-<div>
-    <div class="music-player-container">
-      
-      <div class="title-music-container">
-        <h4 class="titulo-de-la-cancion">Blinding Lights</h4>
-          <span class="autor">The Weeknd</span>
-          <div class="icono"><img src="https://leonardoapi.onrender.com/assets/music/img/theweeknd_blindinglights.jpg" alt="" class="icon" id="theweeknd"></div>
-      </div>
-    
-      <div class="controles-container">
-        <div class="duracion-container">
-          <div class="barra-de-progreso">
-           <span class="progreso"></span>
-    
-    
-        
-  </div>
-
     <div>
-     
+        <header>
+            <nav class="barra-superior">
+             
+                <section class="barra-in">
+                    <div class="tnav">
+                        <div class="searchbar" title="Buscar">
+                            <form action="search" method="get">
+                                <input type="text" placeholder="Buscar.." class="search-box" id="searchbox" style="display: none;">
+                            </form>
+                        </div>
+                        <div class="cplaylist">
+                            <h3 class="cplaylist-btn">+ Crea Tu Playlist</h3>
+                        </div>
     
-    </div>
+                        <div class="usuario">
+                          
+                            <h5>John Doe</h5>
+                            <div class="container-on">
+                                <div class="onindicador"></div>
+                                <h6 class="on">online</h6>
+                            </div>
+                            <img class="perfil" src="/john.jpg" alt="" srcset="">
+                        </div>
+                    </div>
+                        
+                </section>
+            </nav>
+        </header>
+   
+        <main>
+            
+            
+            <div class="current-song">
 
-       <div class="tiempo-contenedor">
-          <span class="tiempo.restante" id="CurrentSongTime"></span>
-            <span class="tiempo.restante" id="SongLength"></span>
-         
-    </div>
-
-    <audio controls preload="metadata" src="https://leonardoapi.onrender.com/assets/music/audio/theweeknd_blindinglights.mp3"></audio>
-    <div class="main-song-controls">  
-      <img src="/assets/skip.png" alt="" class="icon" id="Plus10">
-      <img src="/assets/play.png" alt="" class="icon" id="skipLeft">
-      <img src="assets/skip 2.png" alt="" class="icon" id="skipRight">
-    </div>
-</div>
-
-</div>
-
-<script src="main.js"></script>
+        
+                <audio id="controles"></audio>
+                <audio id="sonido" autoplay></audio>
+                <img class=portada src=""  id="current-song-img" style="width: 500px; height: 500px;" srcset="">
+                <h2 class="titulo-princ"  id="current-song-title">Get lucky Ft Pharrel Williams</h2>
+                <span class="autor-princ"  id="current-song-author">Daft Punk</span>
+                
+            </div>
+               
+        
+            
 
 
+            <div class="track-list" id="tracklist">
 
+            </div>
+            
+            
+            
+        </main>
+    </div>  
+    <div class="bg1"></div>
+    <div class="bg"></div>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

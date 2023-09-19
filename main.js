@@ -1,62 +1,39 @@
-const audio = document.querySelector('audio'),
-    songLength = document.getElementById('SongLength')
-    currentTime = document.getElementById('CurrentSongTime')
+import "./style.css"
 
-const calculateTime = (secs) =>{
-    const minutes =Math.floor(secs / 60),
-        seconds =Math.floor(secs % 60),
-        returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-        return `${minutes}:${returnedSeconds}}`;
+fetch("https://leonardoapi.onrender.com/music")
+.then (res=> res.json()) 
+.then(res=>{
+
+   const contenedor = document.getElementById("tracklist")
+
+    res.map((cancion)=>{
+
+        const contAudio = document.createElement("div")
+        contAudio.classList.add("data-song")
+        contAudio.innerHTML += `
+                <img src="${cancion.path.front}" alt="" id="imgSong" class="imgSong1">
+                <div class="text-song">
+                    <h2 href= "title">${cancion.title}</h2>
+                    <span class="artist">${cancion.author}</span>
+                </div>
+        `
+
+        contAudio.addEventListener("click",()=>{
+        document.getElementById("current-song-img").setAttribute("src",cancion.path.front)
+        document.getElementById("current-song-title").innerHTML = cancion.title
+        document.getElementById("current-song-author").innerHTML = cancion.author
+        document.getElementById("sonido").setAttribute("src",cancion.path.audio)
+
+        })
+
+
+        contenedor.appendChild(contAudio)
+    })
 
 
 
 
-}
-
-const displayDuration = () =>{
-    songLength.innerHTML = calculateTime(audio.duration);
-
-
-}
-
-if(audio.readyState >0){
-
-    displayDuration();
-    currentTime.innerHTML = calculateTime(audio.currentTime);
-}else{
-    audio.addEventListener('loadedmetadata',()=>{
-        displayDuration();
-     })
-}
-
-audio.ontimeupdate = function(){
-    currentTime.innerHTML = calculateTime(audio.currentTime);
-    setProgress();
-
-}
-
-function setProgress(){
-
-    let percentage = (audio.currentTime / audio.duration) *100;
-    document.querySelector('.progress').style.width = percentage + '%';
-}
-
-const playPause = document.getElementById('PlayPause')
-    plus10 = document.getElementById('Plus10')
-    plus10 = document.getElementById('Back10')
-
-playPause.addEventListener('click', ()=>{
-    if(audio.paused){
-        playPause.src = 'pausa.png';
-        audio.play();
-     }else{
-        playPause.src='play.png'
-        audio.pause();
-    }    
 })
-
-
-
 
 
 
